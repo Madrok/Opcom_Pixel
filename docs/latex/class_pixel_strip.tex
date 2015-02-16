@@ -1,0 +1,167 @@
+\section{Pixel\+Strip Class Reference}
+\label{class_pixel_strip}\index{Pixel\+Strip@{Pixel\+Strip}}
+
+
+{\ttfamily \#include $<$Pixel\+Strip.\+h$>$}
+
+Inheritance diagram for Pixel\+Strip\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pixel_strip}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf set\+Pixel\+Color} (uint16\+\_\+t n, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)=0
+\item 
+virtual void {\bf set\+Pixel\+Color} (uint16\+\_\+t n, uint32\+\_\+t c)=0
+\item 
+virtual void {\bf clear} ()=0
+\item 
+virtual uint16\+\_\+t {\bf num\+Pixels} (void) const =0
+\item 
+virtual uint32\+\_\+t {\bf get\+Pixel\+Color} (uint16\+\_\+t n) const =0
+\item 
+virtual uint8\+\_\+t {\bf get\+Brightness} (void) const =0
+\item 
+virtual void {\bf set\+Brightness} (uint8\+\_\+t b)=0
+\item 
+virtual void {\bf set\+All\+Pixels} (uint32\+\_\+t color)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A virtual base class for any sort of strip of led pixels. This is a physical implementation, so this class represents the actual physical device. 
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Strip@{Pixel\+Strip}!clear@{clear}}
+\index{clear@{clear}!Pixel\+Strip@{Pixel\+Strip}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pixel\+Strip\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_pixel_strip_a9bc0c906bc3847c832e78af0c1afb6b8}
+Clear the panel (set to color 0 or dark) 
+
+Implemented in {\bf Adafruit\+\_\+\+Neo\+Pixel} \doxyref{}{p.}{class_adafruit___neo_pixel_ac06a711d7bf63bada61b52a1d528e4b4}, and {\bf Pixel\+Panel} \doxyref{}{p.}{class_pixel_panel_a0989d75f163e68d362e47d11695759e2}.
+
+\index{Pixel\+Strip@{Pixel\+Strip}!get\+Brightness@{get\+Brightness}}
+\index{get\+Brightness@{get\+Brightness}!Pixel\+Strip@{Pixel\+Strip}}
+\subsubsection[{get\+Brightness}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\+\_\+t Pixel\+Strip\+::get\+Brightness (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_pixel_strip_aa79c0e3c07e10f0c5c6cd4fb9d1a60ab}
+Get the brightness of the strip \begin{DoxyReturn}{Returns}
+0-\/255 where 0 is dark, 255 full brightness 
+\end{DoxyReturn}
+
+
+Implemented in {\bf Pixel\+Panel} \doxyref{}{p.}{class_pixel_panel_ac9c071b78bb8b040a644e676ed1681fb}, and {\bf Adafruit\+\_\+\+Neo\+Pixel} \doxyref{}{p.}{class_adafruit___neo_pixel_a3e3dc79b4fad55ea34799c6fa5f8cb82}.
+
+\index{Pixel\+Strip@{Pixel\+Strip}!get\+Pixel\+Color@{get\+Pixel\+Color}}
+\index{get\+Pixel\+Color@{get\+Pixel\+Color}!Pixel\+Strip@{Pixel\+Strip}}
+\subsubsection[{get\+Pixel\+Color}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\+\_\+t Pixel\+Strip\+::get\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_pixel_strip_a273498bf50216a646f24876da0e8d333}
+Return the R\+G\+B color value in a particular pixel \begin{DoxyReturn}{Returns}
+R\+G\+B color value 
+\end{DoxyReturn}
+
+
+Implemented in {\bf Adafruit\+\_\+\+Neo\+Pixel} \doxyref{}{p.}{class_adafruit___neo_pixel_a309cd3fb7a3e2e87a26e7a2fcf6391f1}, and {\bf Pixel\+Panel} \doxyref{}{p.}{class_pixel_panel_a9b7aa3288daddef419e79530a4529dec}.
+
+\index{Pixel\+Strip@{Pixel\+Strip}!num\+Pixels@{num\+Pixels}}
+\index{num\+Pixels@{num\+Pixels}!Pixel\+Strip@{Pixel\+Strip}}
+\subsubsection[{num\+Pixels}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint16\+\_\+t Pixel\+Strip\+::num\+Pixels (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_pixel_strip_a095201c971095020d1adc10b094c896f}
+Get the number of pixels in the panel \begin{DoxyReturn}{Returns}
+Count of pixels 
+\end{DoxyReturn}
+
+
+Implemented in {\bf Adafruit\+\_\+\+Neo\+Pixel} \doxyref{}{p.}{class_adafruit___neo_pixel_a2b2ec05493af8de2a6afe63c1e8f9516}, and {\bf Pixel\+Panel} \doxyref{}{p.}{class_pixel_panel_ade2c5c5942c0597ceff967cd5f44dbea}.
+
+\index{Pixel\+Strip@{Pixel\+Strip}!set\+All\+Pixels@{set\+All\+Pixels}}
+\index{set\+All\+Pixels@{set\+All\+Pixels}!Pixel\+Strip@{Pixel\+Strip}}
+\subsubsection[{set\+All\+Pixels}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pixel\+Strip\+::set\+All\+Pixels (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_strip_ac5811b15226d348a3c64d7a5498128e2}
+Set all the leds to a single color. show() must be called to take effect. 
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to set all leds to \\
+\hline
+\end{DoxyParams}
+\index{Pixel\+Strip@{Pixel\+Strip}!set\+Brightness@{set\+Brightness}}
+\index{set\+Brightness@{set\+Brightness}!Pixel\+Strip@{Pixel\+Strip}}
+\subsubsection[{set\+Brightness}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pixel\+Strip\+::set\+Brightness (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_pixel_strip_a3154e9d623c7ffc39dd70f6cfd39bd68}
+Set the brightness of the strip. 0 is lowest, 255 highest brightness 
+\begin{DoxyParams}{Parameters}
+{\em b} & Brightness value, 8 bit unsigned \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in {\bf Adafruit\+\_\+\+Neo\+Pixel} \doxyref{}{p.}{class_adafruit___neo_pixel_a06915c54a2cc307763b3c44a601229ba}, and {\bf Pixel\+Panel} \doxyref{}{p.}{class_pixel_panel_a5c9e16717161c7230362f28aeccc82bb}.
+
+\index{Pixel\+Strip@{Pixel\+Strip}!set\+Pixel\+Color@{set\+Pixel\+Color}}
+\index{set\+Pixel\+Color@{set\+Pixel\+Color}!Pixel\+Strip@{Pixel\+Strip}}
+\subsubsection[{set\+Pixel\+Color}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pixel\+Strip\+::set\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n, }
+\item[{uint8\+\_\+t}]{r, }
+\item[{uint8\+\_\+t}]{g, }
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_pixel_strip_a391a297d5f9faf1be384bada7199acce}
+Set a specific pixel to the r,g,b color value. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Pixel number \\
+\hline
+{\em r} & Red component \\
+\hline
+{\em g} & Green component \\
+\hline
+{\em b} & Blue component \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in {\bf Adafruit\+\_\+\+Neo\+Pixel} \doxyref{}{p.}{class_adafruit___neo_pixel_ab8763ccc6f9a090df1f753905fd5561e}, and {\bf Pixel\+Panel} \doxyref{}{p.}{class_pixel_panel_aab3e27324193de4990b9db69c2f31dfe}.
+
+\index{Pixel\+Strip@{Pixel\+Strip}!set\+Pixel\+Color@{set\+Pixel\+Color}}
+\index{set\+Pixel\+Color@{set\+Pixel\+Color}!Pixel\+Strip@{Pixel\+Strip}}
+\subsubsection[{set\+Pixel\+Color}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pixel\+Strip\+::set\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n, }
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_pixel_strip_a8fac5124e323b48aaa854143d0d91922}
+Set a specific pixel to the R\+G\+B color value. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Pixel number \\
+\hline
+{\em c} & R\+G\+B Color \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in {\bf Adafruit\+\_\+\+Neo\+Pixel} \doxyref{}{p.}{class_adafruit___neo_pixel_a19fc274330c0e65907929ee03b93b1c3}, and {\bf Pixel\+Panel} \doxyref{}{p.}{class_pixel_panel_a1e25c5aed5eea466b1e4e3c6adcbc8c1}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Strip.\+h\end{DoxyCompactItemize}

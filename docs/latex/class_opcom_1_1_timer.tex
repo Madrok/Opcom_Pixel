@@ -1,0 +1,84 @@
+\section{Opcom\+:\+:Timer Class Reference}
+\label{class_opcom_1_1_timer}\index{Opcom\+::\+Timer@{Opcom\+::\+Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Timer} (unsigned long ms)
+\item 
+bool {\bf is\+Expired} ()
+\item 
+void {\bf reset} ()
+\item 
+void {\bf set\+Interval} (unsigned long ms)
+\item 
+bool {\bf has\+Period\+Passed} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A timer class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Opcom\+::\+Timer@{Opcom\+::\+Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Opcom\+::\+Timer@{Opcom\+::\+Timer}}
+\subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}Opcom\+::\+Timer\+::\+Timer (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{ms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opcom_1_1_timer_ab827892cc7e976d115926edd95fdd6bf}
+Create a timer with a specific interval 
+\begin{DoxyParams}{Parameters}
+{\em ms} & Time in milliseconds \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Opcom\+::\+Timer@{Opcom\+::\+Timer}!has\+Period\+Passed@{has\+Period\+Passed}}
+\index{has\+Period\+Passed@{has\+Period\+Passed}!Opcom\+::\+Timer@{Opcom\+::\+Timer}}
+\subsubsection[{has\+Period\+Passed}]{\setlength{\rightskip}{0pt plus 5cm}bool Opcom\+::\+Timer\+::has\+Period\+Passed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opcom_1_1_timer_a1f20e8351d1a9fb0d97326b54d8ee380}
+Check if expired, and reset if so. Using this method, the timer will prevent drifting by adding any extra time it took between calls. After a call to this method, when it returns true, it also does a reset of the timer. \begin{DoxyReturn}{Returns}
+True if the timer period has elapsed. 
+\end{DoxyReturn}
+\index{Opcom\+::\+Timer@{Opcom\+::\+Timer}!is\+Expired@{is\+Expired}}
+\index{is\+Expired@{is\+Expired}!Opcom\+::\+Timer@{Opcom\+::\+Timer}}
+\subsubsection[{is\+Expired}]{\setlength{\rightskip}{0pt plus 5cm}bool Opcom\+::\+Timer\+::is\+Expired (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opcom_1_1_timer_a03397c57a09388588d139300e5e78975}
+Check if the interval has passed. \begin{DoxyReturn}{Returns}
+true if the interval has passed 
+\end{DoxyReturn}
+\index{Opcom\+::\+Timer@{Opcom\+::\+Timer}!reset@{reset}}
+\index{reset@{reset}!Opcom\+::\+Timer@{Opcom\+::\+Timer}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+::\+Timer\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opcom_1_1_timer_af27be36621d5a80d5a20c1f32a3ab632}
+Reset the start time to the current time \index{Opcom\+::\+Timer@{Opcom\+::\+Timer}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Opcom\+::\+Timer@{Opcom\+::\+Timer}}
+\subsubsection[{set\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+::\+Timer\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{ms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opcom_1_1_timer_ac3481c346fdf0a1c3dd64ecda9c06370}
+Change the interval of the timer 
+\begin{DoxyParams}{Parameters}
+{\em ms} & \doxyref{Timer}{p.}{class_opcom_1_1_timer} interval in milliseconds \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Timer.\+h\end{DoxyCompactItemize}

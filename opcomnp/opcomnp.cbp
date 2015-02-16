@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="opcomnp" />
+		<Option pch_mode="2" />
+		<Option compiler="avr-gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/opcomnp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="avr-gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/opcomnp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="avr-gcc" />
+				<Compiler>
+					<Add option="-Os" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../Adafruit_NeoPixel.cpp" />
+		<Unit filename="../Adafruit_NeoPixel.h" />
+		<Unit filename="../PixelEffect.h" />
+		<Unit filename="../PixelEffectStack.h" />
+		<Unit filename="../PixelEffectWithCallback.h" />
+		<Unit filename="../PixelEffect_Alternating.h" />
+		<Unit filename="../PixelEffect_ColorWipe.h" />
+		<Unit filename="../PixelEffect_Fade.h" />
+		<Unit filename="../PixelEffect_Fire.h" />
+		<Unit filename="../PixelEffect_Flash.h" />
+		<Unit filename="../PixelEffect_KnightRider.h" />
+		<Unit filename="../PixelEffect_Solid.h" />
+		<Unit filename="../PixelEffect_TheatreChase.h" />
+		<Unit filename="../PixelPanel.h" />
+		<Unit filename="../PixelStrip.h" />
+		<Unit filename="../Timer.h" />
+		<Extensions>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output latex="1" />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

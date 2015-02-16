@@ -1,0 +1,79 @@
+\section{Pixel\+Effect\+\_\+\+Alternating Class Reference}
+\label{class_pixel_effect___alternating}\index{Pixel\+Effect\+\_\+\+Alternating@{Pixel\+Effect\+\_\+\+Alternating}}
+
+
+{\ttfamily \#include $<$Pixel\+Effect\+\_\+\+Alternating.\+h$>$}
+
+Inheritance diagram for Pixel\+Effect\+\_\+\+Alternating\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pixel_effect___alternating}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Effect\+\_\+\+Alternating} ({\bf Pixel\+Strip} $\ast$strip, uint32\+\_\+t color, uint16\+\_\+t wait, uint32\+\_\+t color2=0)
+\item 
+void {\bf init} ()
+\item 
+void {\bf run} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Alternating colors 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pixel\+Effect\+\_\+\+Alternating@{Pixel\+Effect\+\_\+\+Alternating}!Pixel\+Effect\+\_\+\+Alternating@{Pixel\+Effect\+\_\+\+Alternating}}
+\index{Pixel\+Effect\+\_\+\+Alternating@{Pixel\+Effect\+\_\+\+Alternating}!Pixel\+Effect\+\_\+\+Alternating@{Pixel\+Effect\+\_\+\+Alternating}}
+\subsubsection[{Pixel\+Effect\+\_\+\+Alternating}]{\setlength{\rightskip}{0pt plus 5cm}Pixel\+Effect\+\_\+\+Alternating\+::\+Pixel\+Effect\+\_\+\+Alternating (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Strip} $\ast$}]{strip, }
+\item[{uint32\+\_\+t}]{color, }
+\item[{uint16\+\_\+t}]{wait, }
+\item[{uint32\+\_\+t}]{color2 = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect___alternating_af7247d2f1e8e7e01f8a7b5215a9ba7a5}
+Alternate between two colors. 
+\begin{DoxyParams}{Parameters}
+{\em strip} & Physical strip or logical Panel pointer \\
+\hline
+{\em color} & Foreground (on) R\+G\+B color to display \\
+\hline
+{\em wait} & Milliseconds to pause between changing \\
+\hline
+{\em color2} & Background (off) color to display. Defaults to black (off) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Effect\+\_\+\+Alternating@{Pixel\+Effect\+\_\+\+Alternating}!init@{init}}
+\index{init@{init}!Pixel\+Effect\+\_\+\+Alternating@{Pixel\+Effect\+\_\+\+Alternating}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Alternating\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___alternating_a858035d6d8874e619289aae06078b4c0}
+The init function, which must be called before the effect is \doxyref{run()}{p.}{class_pixel_effect___alternating_a14628ae24a18b1b9523dfb7e958a0712} 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_ab3c11ba2c2f1cd26e62a0a8f16c6c02b}.
+
+\index{Pixel\+Effect\+\_\+\+Alternating@{Pixel\+Effect\+\_\+\+Alternating}!run@{run}}
+\index{run@{run}!Pixel\+Effect\+\_\+\+Alternating@{Pixel\+Effect\+\_\+\+Alternating}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Alternating\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___alternating_a14628ae24a18b1b9523dfb7e958a0712}
+The \doxyref{run()}{p.}{class_pixel_effect___alternating_a14628ae24a18b1b9523dfb7e958a0712} function, which is called to update the state of the light effect 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Effect\+\_\+\+Alternating.\+h\end{DoxyCompactItemize}

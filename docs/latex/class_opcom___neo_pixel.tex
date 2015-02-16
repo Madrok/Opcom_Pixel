@@ -1,0 +1,249 @@
+\section{Opcom\+\_\+\+Neo\+Pixel Class Reference}
+\label{class_opcom___neo_pixel}\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+
+
+my\+Func\+Pointer\+Type fp =   
+
+
+
+
+{\ttfamily \#include $<$Opcom\+\_\+\+Neo\+Pixel.\+h$>$}
+
+Inheritance diagram for Opcom\+\_\+\+Neo\+Pixel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_opcom___neo_pixel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Opcom\+\_\+\+Neo\+Pixel} (uint16\+\_\+t num\+Leds, uint8\+\_\+t pin=6, uint8\+\_\+t led\+Type=N\+E\+O\+\_\+\+G\+R\+B+N\+E\+O\+\_\+\+K\+H\+Z800)\label{class_opcom___neo_pixel_a9e36e1f3118dce6e684c6d571ed3f5cb}
+
+\item 
+uint32\+\_\+t {\bfseries dim\+Color} (uint32\+\_\+t color, uint8\+\_\+t width)\label{class_opcom___neo_pixel_a95f247f1fe109423ff896120d3fa989e}
+
+\item 
+void {\bf set\+All} (uint32\+\_\+t color)
+\item 
+void {\bf fade\+Out} (uint8\+\_\+t wait)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf schedule\+Effect} (effect\+Callback callback)
+\item 
+void {\bf run\+Effect} ()
+\item 
+void {\bf theatre\+Chase} (uint32\+\_\+t color, uint8\+\_\+t wait)
+\item 
+void {\bf theatre\+Chase\+Rainbow} (uint8\+\_\+t wait)
+\item 
+void {\bf rainbow} (uint8\+\_\+t wait)
+\item 
+void {\bf rainbow\+Cycle} (uint8\+\_\+t wait)
+\item 
+void {\bf color\+Wipe} (uint32\+\_\+t color, uint8\+\_\+t wait)
+\item 
+void {\bf knight\+Rider} (uint16\+\_\+t cycles, uint16\+\_\+t speed, uint8\+\_\+t width, uint32\+\_\+t color=0x\+F\+F1000)
+\item 
+void {\bf fire} ()
+\item 
+void {\bf flash} (uint32\+\_\+t color, uint16\+\_\+t count=5, uint16\+\_\+t on\+Cycle=1000, uint16\+\_\+t off\+Cycle=1000)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t {\bfseries Wheel} (byte Wheel\+Pos)\label{class_opcom___neo_pixel_a6f4433a99fca456ee0cbf43b8ecf3d0a}
+
+\item 
+bool {\bf delay\+Interrupt} (uint16\+\_\+t milliseconds)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile effect\+Callback {\bf m\+\_\+next\+Effect}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+my\+Func\+Pointer\+Type fp =  
+
+\subsection{Member Function Documentation}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!clear@{clear}}
+\index{clear@{clear}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_a336af263afa4890f46d64bd0d4463950}
+Turns all L\+E\+Ds off \index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!color\+Wipe@{color\+Wipe}}
+\index{color\+Wipe@{color\+Wipe}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{color\+Wipe}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::color\+Wipe (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{color, }
+\item[{uint8\+\_\+t}]{wait}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_aaf7d6cb087c29ed54d8db525bd1b6393}
+Fill the dots one after the other with a color 
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to wipe \\
+\hline
+{\em wait} & Milliseconds to wait between transitions \\
+\hline
+\end{DoxyParams}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!delay\+Interrupt@{delay\+Interrupt}}
+\index{delay\+Interrupt@{delay\+Interrupt}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{delay\+Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}bool Opcom\+\_\+\+Neo\+Pixel\+::delay\+Interrupt (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{milliseconds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_opcom___neo_pixel_a084652d3ef190ca912c9b5e66a121545}
+An interruptable delay function \begin{DoxyReturn}{Returns}
+true if new function is available 
+\end{DoxyReturn}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!fade\+Out@{fade\+Out}}
+\index{fade\+Out@{fade\+Out}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{fade\+Out}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::fade\+Out (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{wait}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_ac107269ba3e64a8fcf8577ac8dec99ba}
+Fades the brightness to 0 \index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!fire@{fire}}
+\index{fire@{fire}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{fire}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::fire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_a8f01507bb81ed8d7a4874248a2906fcd}
+A fire effect \index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!flash@{flash}}
+\index{flash@{flash}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{flash}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::flash (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{color, }
+\item[{uint16\+\_\+t}]{count = {\ttfamily 5}, }
+\item[{uint16\+\_\+t}]{on\+Cycle = {\ttfamily 1000}, }
+\item[{uint16\+\_\+t}]{off\+Cycle = {\ttfamily 1000}}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_a165184827e3c73ef6a34861d59cb4b39}
+Flash a color on and off. 
+\begin{DoxyParams}{Parameters}
+{\em color} & Color to flash \\
+\hline
+{\em count} & Number of cycles \\
+\hline
+{\em on\+Cycle} & milliseconds for on state \\
+\hline
+{\em off\+Cycle} & milliseconds for off state \\
+\hline
+\end{DoxyParams}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!knight\+Rider@{knight\+Rider}}
+\index{knight\+Rider@{knight\+Rider}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{knight\+Rider}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::knight\+Rider (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{cycles, }
+\item[{uint16\+\_\+t}]{speed, }
+\item[{uint8\+\_\+t}]{width, }
+\item[{uint32\+\_\+t}]{color = {\ttfamily 0xFF1000}}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_a7a80fec08b041ba6ebf08d3c1f950e83}
+Does a display like the car Kit in the Knight Rider T\+V show 
+\begin{DoxyParams}{Parameters}
+{\em cycles} & one cycle is scanning through all pixels left then right (or right then left) \\
+\hline
+{\em speed} & how fast one cycle is (32 with 16 pixels is default Knight\+Rider speed) \\
+\hline
+{\em width} & how wide the trail effect is on the fading out L\+E\+Ds. The original display used light bulbs, so they have a persistance when turning off. This creates a trail. Effective range is 2 -\/ 8, 4 is default for 16 pixels. Play with this. \\
+\hline
+{\em color} & 32-\/bit packed R\+G\+B color value. Defaults to T\+V series color! \\
+\hline
+\end{DoxyParams}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!rainbow@{rainbow}}
+\index{rainbow@{rainbow}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{rainbow}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::rainbow (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{wait}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_aed961d40345f7400dea1ccf19d0ea48b}
+Rainbow effect 
+\begin{DoxyParams}{Parameters}
+{\em wait} & Milliseconds to wait between transitions \\
+\hline
+\end{DoxyParams}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!rainbow\+Cycle@{rainbow\+Cycle}}
+\index{rainbow\+Cycle@{rainbow\+Cycle}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{rainbow\+Cycle}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::rainbow\+Cycle (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{wait}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_a5eaeba38c62f7774bae7e793b7ed630c}
+Rainbow equally distributed throughout 
+\begin{DoxyParams}{Parameters}
+{\em wait} & Milliseconds to wait between transitions \\
+\hline
+\end{DoxyParams}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!run\+Effect@{run\+Effect}}
+\index{run\+Effect@{run\+Effect}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{run\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::run\+Effect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_a71eeec5b0a20c11207e4e5f2947f3f57}
+Run next scheduled effect \index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!schedule\+Effect@{schedule\+Effect}}
+\index{schedule\+Effect@{schedule\+Effect}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{schedule\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::schedule\+Effect (
+\begin{DoxyParamCaption}
+\item[{effect\+Callback}]{callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opcom___neo_pixel_a77b58a7510786002ca8a28377e4b6356}
+Sets the next effect to run. Starts immediately if an effect is crrently running \index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!set\+All@{set\+All}}
+\index{set\+All@{set\+All}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{set\+All}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::set\+All (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{color}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_a425cbf9c06fba0e5a4c2650127867fe1}
+Set all the leds to a single color. show() must be called to take effect. 
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to set all leds to \\
+\hline
+\end{DoxyParams}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!theatre\+Chase@{theatre\+Chase}}
+\index{theatre\+Chase@{theatre\+Chase}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{theatre\+Chase}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::theatre\+Chase (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{color, }
+\item[{uint8\+\_\+t}]{wait}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_aa1a8dc20cb3dc02704ef093bd533aeba}
+Theatre-\/style crawling lights. 
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to wipe \\
+\hline
+{\em wait} & Milliseconds to wait between transitions \\
+\hline
+\end{DoxyParams}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!theatre\+Chase\+Rainbow@{theatre\+Chase\+Rainbow}}
+\index{theatre\+Chase\+Rainbow@{theatre\+Chase\+Rainbow}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{theatre\+Chase\+Rainbow}]{\setlength{\rightskip}{0pt plus 5cm}void Opcom\+\_\+\+Neo\+Pixel\+::theatre\+Chase\+Rainbow (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{wait}
+\end{DoxyParamCaption}
+)}\label{class_opcom___neo_pixel_ab339909b465437319ccff81e8b6ff8be}
+Theatre-\/style crawling lights with rainbow effect 
+\begin{DoxyParams}{Parameters}
+{\em wait} & Milliseconds to wait between transitions \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}!m\+\_\+next\+Effect@{m\+\_\+next\+Effect}}
+\index{m\+\_\+next\+Effect@{m\+\_\+next\+Effect}!Opcom\+\_\+\+Neo\+Pixel@{Opcom\+\_\+\+Neo\+Pixel}}
+\subsubsection[{m\+\_\+next\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}volatile effect\+Callback Opcom\+\_\+\+Neo\+Pixel\+::m\+\_\+next\+Effect\hspace{0.3cm}{\ttfamily [protected]}}\label{class_opcom___neo_pixel_ab6fe4cdc30f8bed459400661508a4dcd}
+pointer to a next effect 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Opcom\+\_\+\+Neo\+Pixel.\+h\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Opcom\+\_\+\+Neo\+Pixel.\+cpp\end{DoxyCompactItemize}

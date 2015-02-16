@@ -1,0 +1,106 @@
+\section{Pixel\+Effect\+\_\+\+Color\+Wipe Class Reference}
+\label{class_pixel_effect___color_wipe}\index{Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}}
+
+
+{\ttfamily \#include $<$Pixel\+Effect\+\_\+\+Color\+Wipe.\+h$>$}
+
+Inheritance diagram for Pixel\+Effect\+\_\+\+Color\+Wipe\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_pixel_effect___color_wipe}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Effect\+\_\+\+Color\+Wipe} ({\bf Pixel\+Strip} $\ast$strip, uint32\+\_\+t color, uint32\+\_\+t delay)
+\item 
+void {\bf set\+Clear\+Background} (bool v)
+\item 
+void {\bf set\+Filled\+Delay} (uint32\+\_\+t delay)
+\item 
+void {\bf init} ()
+\item 
+void {\bf run} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A color wipe that fills strip pixel by pixel. Defaults to immediately clearing and starting a new wipe.
+
+The cb\+Init function is called each time the effect starts over, before clearing the panel. cb\+Finished is called once the panel is full, after the pixels have displayed for the on time. Return false from cb\+Finished to stop the display from being cleared. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}!Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}}
+\index{Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}!Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}}
+\subsubsection[{Pixel\+Effect\+\_\+\+Color\+Wipe}]{\setlength{\rightskip}{0pt plus 5cm}Pixel\+Effect\+\_\+\+Color\+Wipe\+::\+Pixel\+Effect\+\_\+\+Color\+Wipe (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Strip} $\ast$}]{strip, }
+\item[{uint32\+\_\+t}]{color, }
+\item[{uint32\+\_\+t}]{delay}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect___color_wipe_a4a32c7e85ebd5c0ee452ff44bc8b73e5}
+Wipe a color in to fill a strip 
+\begin{DoxyParams}{Parameters}
+{\em strip} & Pixel panel \\
+\hline
+{\em color} & Foreground color for fill \\
+\hline
+{\em delay} & milliseconds between pixels \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}!init@{init}}
+\index{init@{init}!Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Color\+Wipe\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___color_wipe_a29c4790d9b4ae6387d39f61963e57c5c}
+The init function, which must be called before the effect is \doxyref{run()}{p.}{class_pixel_effect___color_wipe_a86123dfb5f720e46f668e60a19f8808a} 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_ab3c11ba2c2f1cd26e62a0a8f16c6c02b}.
+
+\index{Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}!run@{run}}
+\index{run@{run}!Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Color\+Wipe\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___color_wipe_a86123dfb5f720e46f668e60a19f8808a}
+The \doxyref{run()}{p.}{class_pixel_effect___color_wipe_a86123dfb5f720e46f668e60a19f8808a} function, which is called to update the state of the light effect 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d}.
+
+\index{Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}!set\+Clear\+Background@{set\+Clear\+Background}}
+\index{set\+Clear\+Background@{set\+Clear\+Background}!Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}}
+\subsubsection[{set\+Clear\+Background}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Color\+Wipe\+::set\+Clear\+Background (
+\begin{DoxyParamCaption}
+\item[{bool}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect___color_wipe_a155c115000794ec444163e31f1125a55}
+Set to false if you do not wish the existing pixels cleared on first run. The strip will be cleared on each subsequent run regardless. 
+\begin{DoxyParams}{Parameters}
+{\em v} & True to clear background before first run \\
+\hline
+\end{DoxyParams}
+\index{Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}!set\+Filled\+Delay@{set\+Filled\+Delay}}
+\index{set\+Filled\+Delay@{set\+Filled\+Delay}!Pixel\+Effect\+\_\+\+Color\+Wipe@{Pixel\+Effect\+\_\+\+Color\+Wipe}}
+\subsubsection[{set\+Filled\+Delay}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Color\+Wipe\+::set\+Filled\+Delay (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{delay}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect___color_wipe_a5e45401882581dd4f4b2e93088f3ed98}
+Set the delay at the end of the cycle when all the pixels have filled. By default this value is the same as the delay between pixels. 
+\begin{DoxyParams}{Parameters}
+{\em delay} & Delay time in ms \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Effect\+\_\+\+Color\+Wipe.\+h\end{DoxyCompactItemize}

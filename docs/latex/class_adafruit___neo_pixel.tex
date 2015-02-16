@@ -1,0 +1,214 @@
+\section{Adafruit\+\_\+\+Neo\+Pixel Class Reference}
+\label{class_adafruit___neo_pixel}\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+
+
+{\ttfamily \#include $<$Adafruit\+\_\+\+Neo\+Pixel.\+h$>$}
+
+Inheritance diagram for Adafruit\+\_\+\+Neo\+Pixel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_adafruit___neo_pixel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Adafruit\+\_\+\+Neo\+Pixel} (uint16\+\_\+t n, uint8\+\_\+t p=6, uint8\+\_\+t t=N\+E\+O\+\_\+\+G\+R\+B+N\+E\+O\+\_\+\+K\+H\+Z800)
+\item 
+void {\bf begin} (void)
+\item 
+void {\bf show} (void)
+\item 
+void {\bf set\+Pin} (uint8\+\_\+t p)
+\item 
+void {\bf set\+Pixel\+Color} (uint16\+\_\+t n, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\item 
+void {\bf set\+Pixel\+Color} (uint16\+\_\+t n, uint32\+\_\+t c)
+\item 
+void {\bf set\+Brightness} (uint8\+\_\+t bright)
+\item 
+uint8\+\_\+t {\bf get\+Brightness} (void) const 
+\item 
+void {\bf clear} ()
+\item 
+uint8\+\_\+t $\ast$ {\bf get\+Pixels} (void) const 
+\item 
+uint16\+\_\+t {\bf num\+Pixels} (void) const 
+\item 
+uint32\+\_\+t {\bf get\+Pixel\+Color} (uint16\+\_\+t n) const 
+\item 
+bool {\bfseries can\+Show} (void)\label{class_adafruit___neo_pixel_a9e900a60b0ac2b43b99309bb118b929e}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t {\bf Color} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for the physical Adafruit Neo\+Pixel panel products. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{Adafruit\+\_\+\+Neo\+Pixel}]{\setlength{\rightskip}{0pt plus 5cm}Adafruit\+\_\+\+Neo\+Pixel\+::\+Adafruit\+\_\+\+Neo\+Pixel (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n, }
+\item[{uint8\+\_\+t}]{p = {\ttfamily 6}, }
+\item[{uint8\+\_\+t}]{t = {\ttfamily NEO\+\_\+GRB~+~NEO\+\_\+KHZ800}}
+\end{DoxyParamCaption}
+)}\label{class_adafruit___neo_pixel_ab8675c851ba6ee66407443faf36313f7}
+Create a Neo\+Pixel Object 
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of leds \\
+\hline
+{\em p} & Pin number \\
+\hline
+{\em t} & L\+E\+D type \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!begin@{begin}}
+\index{begin@{begin}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+Neo\+Pixel\+::begin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_adafruit___neo_pixel_ac1cb16509be644232ce0e28d250083da}
+Initialize the Neo\+Pixel \index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!clear@{clear}}
+\index{clear@{clear}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+Neo\+Pixel\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_adafruit___neo_pixel_ac06a711d7bf63bada61b52a1d528e4b4}
+Sets all values to 0 (off) 
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a9bc0c906bc3847c832e78af0c1afb6b8}.
+
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!Color@{Color}}
+\index{Color@{Color}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Adafruit\+\_\+\+Neo\+Pixel\+::\+Color (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{r, }
+\item[{uint8\+\_\+t}]{g, }
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_adafruit___neo_pixel_ac49f3c50948815d45cecccbc66453386}
+Convert separate R,G,B into packed 32-\/bit R\+G\+B color. Packed format is always R\+G\+B, regardless of L\+E\+D strand color order. \index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!get\+Brightness@{get\+Brightness}}
+\index{get\+Brightness@{get\+Brightness}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{get\+Brightness}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Adafruit\+\_\+\+Neo\+Pixel\+::get\+Brightness (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_adafruit___neo_pixel_a3e3dc79b4fad55ea34799c6fa5f8cb82}
+Return the brightness value 
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_aa79c0e3c07e10f0c5c6cd4fb9d1a60ab}.
+
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!get\+Pixel\+Color@{get\+Pixel\+Color}}
+\index{get\+Pixel\+Color@{get\+Pixel\+Color}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{get\+Pixel\+Color}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Adafruit\+\_\+\+Neo\+Pixel\+::get\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_adafruit___neo_pixel_a309cd3fb7a3e2e87a26e7a2fcf6391f1}
+Query color from previously-\/set pixel (returns packed 32-\/bit R\+G\+B value) 
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a273498bf50216a646f24876da0e8d333}.
+
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!get\+Pixels@{get\+Pixels}}
+\index{get\+Pixels@{get\+Pixels}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{get\+Pixels}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t $\ast$ Adafruit\+\_\+\+Neo\+Pixel\+::get\+Pixels (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\label{class_adafruit___neo_pixel_a7ece3071ea718d37308f7a31fe82637c}
+Returns pointer to pixels[] array. Pixel data is stored in device-\/ native format and is not translated here. Application will need to be aware whether pixels are R\+G\+B vs. G\+R\+B and handle colors appropriately. \index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!num\+Pixels@{num\+Pixels}}
+\index{num\+Pixels@{num\+Pixels}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{num\+Pixels}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Adafruit\+\_\+\+Neo\+Pixel\+::num\+Pixels (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_adafruit___neo_pixel_a2b2ec05493af8de2a6afe63c1e8f9516}
+Get the number of pixels this strip was initialized to. 
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a095201c971095020d1adc10b094c896f}.
+
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!set\+Brightness@{set\+Brightness}}
+\index{set\+Brightness@{set\+Brightness}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{set\+Brightness}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+Neo\+Pixel\+::set\+Brightness (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{bright}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_adafruit___neo_pixel_a06915c54a2cc307763b3c44a601229ba}
+Adjust output brightness; This does N\+O\+T immediately affect what\textquotesingle{}s currently displayed on the L\+E\+Ds. The next call to \doxyref{show()}{p.}{class_adafruit___neo_pixel_a4bcda7a15591065570d3598cbf970be7} will refresh the L\+E\+Ds at this level. However, this process is potentially \char`\"{}lossy,\char`\"{} especially when increasing brightness. The tight timing in the W\+S2811/\+W\+S2812 code means there aren\textquotesingle{}t enough free cycles to perform this scaling on the fly as data is issued. So we make a pass through the existing color data in R\+A\+M and scale it (subsequent graphics commands also work at this brightness level). If there\textquotesingle{}s a significant step up in brightness, the limited number of steps (quantization) in the old data will be quite visible in the re-\/scaled version. For a non-\/destructive change, you\textquotesingle{}ll need to re-\/render the full strip data. C\textquotesingle{}est la vie. 
+\begin{DoxyParams}{Parameters}
+{\em bright} & 0=darkest (off), 255=brightest. \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a3154e9d623c7ffc39dd70f6cfd39bd68}.
+
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!set\+Pin@{set\+Pin}}
+\index{set\+Pin@{set\+Pin}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{set\+Pin}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+Neo\+Pixel\+::set\+Pin (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{p}
+\end{DoxyParamCaption}
+)}\label{class_adafruit___neo_pixel_a64a6704fdac239046791e7a9f7a76ab6}
+Set the output pin number \index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!set\+Pixel\+Color@{set\+Pixel\+Color}}
+\index{set\+Pixel\+Color@{set\+Pixel\+Color}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{set\+Pixel\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+Neo\+Pixel\+::set\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n, }
+\item[{uint8\+\_\+t}]{r, }
+\item[{uint8\+\_\+t}]{g, }
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_adafruit___neo_pixel_ab8763ccc6f9a090df1f753905fd5561e}
+Set pixel color from separate R,G,B components\+: 
+\begin{DoxyParams}{Parameters}
+{\em n} & Pixel number \\
+\hline
+{\em r} & Red component (0-\/255 \\
+\hline
+{\em g} & Green component \\
+\hline
+{\em b} & Blue component \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a391a297d5f9faf1be384bada7199acce}.
+
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!set\+Pixel\+Color@{set\+Pixel\+Color}}
+\index{set\+Pixel\+Color@{set\+Pixel\+Color}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{set\+Pixel\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+Neo\+Pixel\+::set\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n, }
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_adafruit___neo_pixel_a19fc274330c0e65907929ee03b93b1c3}
+Set pixel color from \textquotesingle{}packed\textquotesingle{} 32-\/bit R\+G\+B color\+: 
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a8fac5124e323b48aaa854143d0d91922}.
+
+\index{Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}!show@{show}}
+\index{show@{show}!Adafruit\+\_\+\+Neo\+Pixel@{Adafruit\+\_\+\+Neo\+Pixel}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+Neo\+Pixel\+::show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_adafruit___neo_pixel_a4bcda7a15591065570d3598cbf970be7}
+Refresh the data into the Neo\+Pixel. This needs to be called to display the current data. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Adafruit\+\_\+\+Neo\+Pixel.\+h\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Adafruit\+\_\+\+Neo\+Pixel.\+cpp\end{DoxyCompactItemize}

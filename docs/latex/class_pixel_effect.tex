@@ -1,0 +1,118 @@
+\section{Pixel\+Effect Class Reference}
+\label{class_pixel_effect}\index{Pixel\+Effect@{Pixel\+Effect}}
+
+
+{\ttfamily \#include $<$Pixel\+Effect.\+h$>$}
+
+Inheritance diagram for Pixel\+Effect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_pixel_effect}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf disable} ()
+\item 
+void {\bf enable} ()
+\item 
+bool {\bf is\+Enabled} ()
+\item 
+virtual void {\bf init} ()=0
+\item 
+virtual void {\bf run} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Effect} ({\bf Pixel\+Strip} $\ast$strip)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Strip} $\ast$ {\bf m\+\_\+strip}
+\item 
+bool {\bf m\+\_\+enabled}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The base class for any light effect. Light effects can be added to either a physical \doxyref{Pixel\+Strip}{p.}{class_pixel_strip} or a \doxyref{Pixel\+Panel}{p.}{class_pixel_panel} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pixel\+Effect@{Pixel\+Effect}!Pixel\+Effect@{Pixel\+Effect}}
+\index{Pixel\+Effect@{Pixel\+Effect}!Pixel\+Effect@{Pixel\+Effect}}
+\subsubsection[{Pixel\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}Pixel\+Effect\+::\+Pixel\+Effect (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Strip} $\ast$}]{strip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_pixel_effect_a1d090e3203685f2eb92d37404fc823e5}
+Should be called by sub classes. Sets up the strip and enables the effect by default. 
+\begin{DoxyParams}{Parameters}
+{\em strip} & Physical strip or logical Panel pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Effect@{Pixel\+Effect}!disable@{disable}}
+\index{disable@{disable}!Pixel\+Effect@{Pixel\+Effect}}
+\subsubsection[{disable}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+::disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect_ac5f4105763604a3b44c28d7eec34885e}
+Disable running. This will prevent the light effect from updating during the call to \doxyref{run()}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d} \index{Pixel\+Effect@{Pixel\+Effect}!enable@{enable}}
+\index{enable@{enable}!Pixel\+Effect@{Pixel\+Effect}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+::enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect_a97987697b6f5cce2a522d7936441e2aa}
+Enable running. This will cause the light effect to be updated during the call to \doxyref{run()}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d} \index{Pixel\+Effect@{Pixel\+Effect}!init@{init}}
+\index{init@{init}!Pixel\+Effect@{Pixel\+Effect}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pixel\+Effect\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_pixel_effect_ab3c11ba2c2f1cd26e62a0a8f16c6c02b}
+The init function, which must be called before the effect is \doxyref{run()}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d} 
+
+Implemented in {\bf Pixel\+Effect\+Stack} \doxyref{}{p.}{class_pixel_effect_stack_a726083b8f63898358945226fa175757b}, {\bf Pixel\+Effect\+\_\+\+Knight\+Rider} \doxyref{}{p.}{class_pixel_effect___knight_rider_a16b3569280331671f795e367b4f4dd54}, {\bf Pixel\+Effect\+\_\+\+Color\+Wipe} \doxyref{}{p.}{class_pixel_effect___color_wipe_a29c4790d9b4ae6387d39f61963e57c5c}, {\bf Pixel\+Effect\+\_\+\+Fire} \doxyref{}{p.}{class_pixel_effect___fire_a210a5c79036f523f1a98fbf97a975d16}, {\bf Pixel\+Effect\+\_\+\+Flash} \doxyref{}{p.}{class_pixel_effect___flash_a4563d09b05c4af920675f7246d136c27}, {\bf Pixel\+Effect\+\_\+\+Theatre\+Chase} \doxyref{}{p.}{class_pixel_effect___theatre_chase_a6576f90406a69407d9b6633b30e1075e}, {\bf Pixel\+Effect\+\_\+\+Alternating} \doxyref{}{p.}{class_pixel_effect___alternating_a858035d6d8874e619289aae06078b4c0}, {\bf Pixel\+Effect\+\_\+\+Fade} \doxyref{}{p.}{class_pixel_effect___fade_a4a9ec0355f7afec0967d446a0b70a4d5}, and {\bf Pixel\+Effect\+\_\+\+Solid} \doxyref{}{p.}{class_pixel_effect___solid_a74c03fc565fde97566240ea176b7b5ce}.
+
+\index{Pixel\+Effect@{Pixel\+Effect}!is\+Enabled@{is\+Enabled}}
+\index{is\+Enabled@{is\+Enabled}!Pixel\+Effect@{Pixel\+Effect}}
+\subsubsection[{is\+Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool Pixel\+Effect\+::is\+Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect_a5e5f1c4df8f226b20a1efb859e0037c8}
+Check if this light effect is enabled or not. \begin{DoxyReturn}{Returns}
+True if enabled 
+\end{DoxyReturn}
+\index{Pixel\+Effect@{Pixel\+Effect}!run@{run}}
+\index{run@{run}!Pixel\+Effect@{Pixel\+Effect}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pixel\+Effect\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d}
+The \doxyref{run()}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d} function, which is called to update the state of the light effect 
+
+Implemented in {\bf Pixel\+Effect\+Stack} \doxyref{}{p.}{class_pixel_effect_stack_a6fbd31bab015a7d3526915a60392cbd1}, {\bf Pixel\+Effect\+\_\+\+Knight\+Rider} \doxyref{}{p.}{class_pixel_effect___knight_rider_a35c58ed5e875365942e4666d43eafe39}, {\bf Pixel\+Effect\+\_\+\+Color\+Wipe} \doxyref{}{p.}{class_pixel_effect___color_wipe_a86123dfb5f720e46f668e60a19f8808a}, {\bf Pixel\+Effect\+\_\+\+Fire} \doxyref{}{p.}{class_pixel_effect___fire_ac3d39af015e7005f8e345cc4d83d81f0}, {\bf Pixel\+Effect\+\_\+\+Flash} \doxyref{}{p.}{class_pixel_effect___flash_a96a43629b9422fc10420ab48604e08e2}, {\bf Pixel\+Effect\+\_\+\+Theatre\+Chase} \doxyref{}{p.}{class_pixel_effect___theatre_chase_a18283d29998b59918d604893cd3e9527}, {\bf Pixel\+Effect\+\_\+\+Alternating} \doxyref{}{p.}{class_pixel_effect___alternating_a14628ae24a18b1b9523dfb7e958a0712}, {\bf Pixel\+Effect\+\_\+\+Fade} \doxyref{}{p.}{class_pixel_effect___fade_ad538d7242223524b00c39104e2bc5001}, and {\bf Pixel\+Effect\+\_\+\+Solid} \doxyref{}{p.}{class_pixel_effect___solid_a2a5887f47c4f56d23707387be85d5b6b}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Pixel\+Effect@{Pixel\+Effect}!m\+\_\+enabled@{m\+\_\+enabled}}
+\index{m\+\_\+enabled@{m\+\_\+enabled}!Pixel\+Effect@{Pixel\+Effect}}
+\subsubsection[{m\+\_\+enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool Pixel\+Effect\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pixel_effect_a554bf74c717d48563aed3871c9e2bdc1}
+true if effect is enabled and should be updated during run \index{Pixel\+Effect@{Pixel\+Effect}!m\+\_\+strip@{m\+\_\+strip}}
+\index{m\+\_\+strip@{m\+\_\+strip}!Pixel\+Effect@{Pixel\+Effect}}
+\subsubsection[{m\+\_\+strip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pixel\+Strip}$\ast$ Pixel\+Effect\+::m\+\_\+strip\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pixel_effect_af2e843ef8269aba69904f223773972ca}
+The panel or strip this effect is running on 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Effect.\+h\end{DoxyCompactItemize}

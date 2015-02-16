@@ -1,0 +1,79 @@
+\section{Pixel\+Effect\+\_\+\+Solid Class Reference}
+\label{class_pixel_effect___solid}\index{Pixel\+Effect\+\_\+\+Solid@{Pixel\+Effect\+\_\+\+Solid}}
+
+
+{\ttfamily \#include $<$Pixel\+Effect\+\_\+\+Solid.\+h$>$}
+
+Inheritance diagram for Pixel\+Effect\+\_\+\+Solid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pixel_effect___solid}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Effect\+\_\+\+Solid} ({\bf Pixel\+Strip} $\ast$strip, uint32\+\_\+t color)
+\item 
+void {\bf init} ()
+\item 
+void {\bf run} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t {\bfseries m\+\_\+color}\label{class_pixel_effect___solid_ab4f2eb82c75660bf031b6c21e2b45fa7}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Create a solid color that does not change. Every call to run will recreate the color, so in most cases, this effect can be \doxyref{run()}{p.}{class_pixel_effect___solid_a2a5887f47c4f56d23707387be85d5b6b} once then disabled, if no other display is running on the panel. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pixel\+Effect\+\_\+\+Solid@{Pixel\+Effect\+\_\+\+Solid}!Pixel\+Effect\+\_\+\+Solid@{Pixel\+Effect\+\_\+\+Solid}}
+\index{Pixel\+Effect\+\_\+\+Solid@{Pixel\+Effect\+\_\+\+Solid}!Pixel\+Effect\+\_\+\+Solid@{Pixel\+Effect\+\_\+\+Solid}}
+\subsubsection[{Pixel\+Effect\+\_\+\+Solid}]{\setlength{\rightskip}{0pt plus 5cm}Pixel\+Effect\+\_\+\+Solid\+::\+Pixel\+Effect\+\_\+\+Solid (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Strip} $\ast$}]{strip, }
+\item[{uint32\+\_\+t}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect___solid_a93a5a69f9f3deaa0c62d05a2eec5f284}
+Create a solid fill. 
+\begin{DoxyParams}{Parameters}
+{\em strip} & Physical strip or logical Panel pointer \\
+\hline
+{\em color} & Solid R\+G\+B color to display \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Effect\+\_\+\+Solid@{Pixel\+Effect\+\_\+\+Solid}!init@{init}}
+\index{init@{init}!Pixel\+Effect\+\_\+\+Solid@{Pixel\+Effect\+\_\+\+Solid}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Solid\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___solid_a74c03fc565fde97566240ea176b7b5ce}
+The init function, which must be called before the effect is \doxyref{run()}{p.}{class_pixel_effect___solid_a2a5887f47c4f56d23707387be85d5b6b} 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_ab3c11ba2c2f1cd26e62a0a8f16c6c02b}.
+
+\index{Pixel\+Effect\+\_\+\+Solid@{Pixel\+Effect\+\_\+\+Solid}!run@{run}}
+\index{run@{run}!Pixel\+Effect\+\_\+\+Solid@{Pixel\+Effect\+\_\+\+Solid}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Solid\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___solid_a2a5887f47c4f56d23707387be85d5b6b}
+The \doxyref{run()}{p.}{class_pixel_effect___solid_a2a5887f47c4f56d23707387be85d5b6b} function, which is called to update the state of the light effect 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Effect\+\_\+\+Solid.\+h\end{DoxyCompactItemize}

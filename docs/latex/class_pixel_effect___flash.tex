@@ -1,0 +1,82 @@
+\section{Pixel\+Effect\+\_\+\+Flash Class Reference}
+\label{class_pixel_effect___flash}\index{Pixel\+Effect\+\_\+\+Flash@{Pixel\+Effect\+\_\+\+Flash}}
+
+
+{\ttfamily \#include $<$Pixel\+Effect\+\_\+\+Flash.\+h$>$}
+
+Inheritance diagram for Pixel\+Effect\+\_\+\+Flash\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pixel_effect___flash}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Effect\+\_\+\+Flash} ({\bf Pixel\+Strip} $\ast$strip, uint32\+\_\+t color\+On, uint32\+\_\+t on\+Time, uint32\+\_\+t color\+Off, uint32\+\_\+t off\+Time)
+\item 
+void {\bf init} ()
+\item 
+void {\bf run} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Flashes a color on and off, with configurable on and off time 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pixel\+Effect\+\_\+\+Flash@{Pixel\+Effect\+\_\+\+Flash}!Pixel\+Effect\+\_\+\+Flash@{Pixel\+Effect\+\_\+\+Flash}}
+\index{Pixel\+Effect\+\_\+\+Flash@{Pixel\+Effect\+\_\+\+Flash}!Pixel\+Effect\+\_\+\+Flash@{Pixel\+Effect\+\_\+\+Flash}}
+\subsubsection[{Pixel\+Effect\+\_\+\+Flash}]{\setlength{\rightskip}{0pt plus 5cm}Pixel\+Effect\+\_\+\+Flash\+::\+Pixel\+Effect\+\_\+\+Flash (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Strip} $\ast$}]{strip, }
+\item[{uint32\+\_\+t}]{color\+On, }
+\item[{uint32\+\_\+t}]{on\+Time, }
+\item[{uint32\+\_\+t}]{color\+Off, }
+\item[{uint32\+\_\+t}]{off\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect___flash_a4033d8ba5e3ac05315e3b5cda3277ebd}
+Flash a color on and off. 
+\begin{DoxyParams}{Parameters}
+{\em strip} & Physical strip or logical Panel pointer \\
+\hline
+{\em color\+On} & Color to flash \\
+\hline
+{\em on\+Time} & milliseconds for on state \\
+\hline
+{\em color\+Off} & Color during \textquotesingle{}off\textquotesingle{} state \\
+\hline
+{\em off\+Time} & milliseconds for off state \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Effect\+\_\+\+Flash@{Pixel\+Effect\+\_\+\+Flash}!init@{init}}
+\index{init@{init}!Pixel\+Effect\+\_\+\+Flash@{Pixel\+Effect\+\_\+\+Flash}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Flash\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___flash_a4563d09b05c4af920675f7246d136c27}
+The init function, which must be called before the effect is \doxyref{run()}{p.}{class_pixel_effect___flash_a96a43629b9422fc10420ab48604e08e2} 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_ab3c11ba2c2f1cd26e62a0a8f16c6c02b}.
+
+\index{Pixel\+Effect\+\_\+\+Flash@{Pixel\+Effect\+\_\+\+Flash}!run@{run}}
+\index{run@{run}!Pixel\+Effect\+\_\+\+Flash@{Pixel\+Effect\+\_\+\+Flash}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Flash\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___flash_a96a43629b9422fc10420ab48604e08e2}
+The \doxyref{run()}{p.}{class_pixel_effect___flash_a96a43629b9422fc10420ab48604e08e2} function, which is called to update the state of the light effect 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Effect\+\_\+\+Flash.\+h\end{DoxyCompactItemize}

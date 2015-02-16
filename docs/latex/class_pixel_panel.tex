@@ -1,0 +1,226 @@
+\section{Pixel\+Panel Class Reference}
+\label{class_pixel_panel}\index{Pixel\+Panel@{Pixel\+Panel}}
+
+
+{\ttfamily \#include $<$Pixel\+Panel.\+h$>$}
+
+Inheritance diagram for Pixel\+Panel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pixel_panel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Panel} ({\bf Pixel\+Strip} $\ast$strip, uint16\+\_\+t start\+Idx, uint16\+\_\+t {\bf num\+Pixels})
+\item 
+{\bf Pixel\+Strip} $\ast$ {\bf get\+Strip} ()
+\item 
+void {\bf set\+Pixel\+Color} (uint16\+\_\+t n, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\item 
+void {\bf set\+Pixel\+Color} (uint16\+\_\+t n, uint32\+\_\+t c)
+\item 
+void {\bf clear} ()
+\item 
+uint16\+\_\+t {\bf num\+Pixels} (void) const 
+\item 
+uint32\+\_\+t {\bf get\+Pixel\+Color} (uint16\+\_\+t n) const 
+\item 
+uint16\+\_\+t {\bf get\+Offset} ()
+\item 
+void {\bf set\+Brightness} (uint8\+\_\+t b)
+\item 
+uint8\+\_\+t {\bf get\+Brightness} (void) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Strip} $\ast$ {\bf m\+\_\+strip}
+\item 
+uint16\+\_\+t {\bf m\+\_\+offset}
+\item 
+uint16\+\_\+t {\bf m\+\_\+num\+Pixels}
+\item 
+uint8\+\_\+t {\bf m\+\_\+brightness}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pixel panel is a logical division of a physical \doxyref{Pixel\+Strip}{p.}{class_pixel_strip}. These are virtual panels, so multiple panels ccan be on a physical strip. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pixel\+Panel@{Pixel\+Panel}!Pixel\+Panel@{Pixel\+Panel}}
+\index{Pixel\+Panel@{Pixel\+Panel}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{Pixel\+Panel}]{\setlength{\rightskip}{0pt plus 5cm}Pixel\+Panel\+::\+Pixel\+Panel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Strip} $\ast$}]{strip, }
+\item[{uint16\+\_\+t}]{start\+Idx, }
+\item[{uint16\+\_\+t}]{num\+Pixels}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_panel_aa37805f359a7e5aa1db4654efcd3029c}
+Create a logical panel inside a physical strip. 
+\begin{DoxyParams}{Parameters}
+{\em strip} & The physical pixel strip \\
+\hline
+{\em start\+Idx} & The starting pixl number on the physical device. Start at 0 for first pixel. \\
+\hline
+{\em num\+Pixels} & The number of pixels to reserve for this logical panel \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Panel@{Pixel\+Panel}!clear@{clear}}
+\index{clear@{clear}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Panel\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_panel_a0989d75f163e68d362e47d11695759e2}
+Clear the panel (set to color 0 or dark) 
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a9bc0c906bc3847c832e78af0c1afb6b8}.
+
+\index{Pixel\+Panel@{Pixel\+Panel}!get\+Brightness@{get\+Brightness}}
+\index{get\+Brightness@{get\+Brightness}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{get\+Brightness}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Pixel\+Panel\+::get\+Brightness (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_panel_ac9c071b78bb8b040a644e676ed1681fb}
+Get the brightness of the strip \begin{DoxyReturn}{Returns}
+0-\/255 where 0 is dark, 255 full brightness 
+\end{DoxyReturn}
+
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_aa79c0e3c07e10f0c5c6cd4fb9d1a60ab}.
+
+\index{Pixel\+Panel@{Pixel\+Panel}!get\+Offset@{get\+Offset}}
+\index{get\+Offset@{get\+Offset}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{get\+Offset}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Pixel\+Panel\+::get\+Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_panel_ae760cf40a15d724b58bd1e81f153361c}
+Returns the offset of this logical panel in the physical strip. \begin{DoxyReturn}{Returns}
+Pixel offset value 
+\end{DoxyReturn}
+\index{Pixel\+Panel@{Pixel\+Panel}!get\+Pixel\+Color@{get\+Pixel\+Color}}
+\index{get\+Pixel\+Color@{get\+Pixel\+Color}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{get\+Pixel\+Color}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Pixel\+Panel\+::get\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_panel_a9b7aa3288daddef419e79530a4529dec}
+Return the R\+G\+B color value in a particular pixel \begin{DoxyReturn}{Returns}
+R\+G\+B color value 
+\end{DoxyReturn}
+
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a273498bf50216a646f24876da0e8d333}.
+
+\index{Pixel\+Panel@{Pixel\+Panel}!get\+Strip@{get\+Strip}}
+\index{get\+Strip@{get\+Strip}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{get\+Strip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pixel\+Strip}$\ast$ Pixel\+Panel\+::get\+Strip (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_panel_aa99dc12e0a4d684ceac285f9021cb88d}
+Get the physical strip this panel is associated with \begin{DoxyReturn}{Returns}
+Pointer to \doxyref{Pixel\+Strip}{p.}{class_pixel_strip} 
+\end{DoxyReturn}
+\index{Pixel\+Panel@{Pixel\+Panel}!num\+Pixels@{num\+Pixels}}
+\index{num\+Pixels@{num\+Pixels}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{num\+Pixels}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Pixel\+Panel\+::num\+Pixels (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_panel_ade2c5c5942c0597ceff967cd5f44dbea}
+Get the number of pixels in the panel \begin{DoxyReturn}{Returns}
+Count of pixels 
+\end{DoxyReturn}
+
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a095201c971095020d1adc10b094c896f}.
+
+\index{Pixel\+Panel@{Pixel\+Panel}!set\+Brightness@{set\+Brightness}}
+\index{set\+Brightness@{set\+Brightness}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{set\+Brightness}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Panel\+::set\+Brightness (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_panel_a5c9e16717161c7230362f28aeccc82bb}
+Set the brightness of the strip. 0 is lowest, 255 highest brightness 
+\begin{DoxyParams}{Parameters}
+{\em b} & Brightness value, 8 bit unsigned \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a3154e9d623c7ffc39dd70f6cfd39bd68}.
+
+\index{Pixel\+Panel@{Pixel\+Panel}!set\+Pixel\+Color@{set\+Pixel\+Color}}
+\index{set\+Pixel\+Color@{set\+Pixel\+Color}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{set\+Pixel\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Panel\+::set\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n, }
+\item[{uint8\+\_\+t}]{r, }
+\item[{uint8\+\_\+t}]{g, }
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_panel_aab3e27324193de4990b9db69c2f31dfe}
+Set a specific pixel to the r,g,b color value. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Pixel number \\
+\hline
+{\em r} & Red component \\
+\hline
+{\em g} & Green component \\
+\hline
+{\em b} & Blue component \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a391a297d5f9faf1be384bada7199acce}.
+
+\index{Pixel\+Panel@{Pixel\+Panel}!set\+Pixel\+Color@{set\+Pixel\+Color}}
+\index{set\+Pixel\+Color@{set\+Pixel\+Color}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{set\+Pixel\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Panel\+::set\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n, }
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_panel_a1e25c5aed5eea466b1e4e3c6adcbc8c1}
+Set a specific pixel to the R\+G\+B color value. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Pixel number \\
+\hline
+{\em c} & R\+G\+B Color \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf Pixel\+Strip} \doxyref{}{p.}{class_pixel_strip_a8fac5124e323b48aaa854143d0d91922}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Pixel\+Panel@{Pixel\+Panel}!m\+\_\+brightness@{m\+\_\+brightness}}
+\index{m\+\_\+brightness@{m\+\_\+brightness}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{m\+\_\+brightness}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Pixel\+Panel\+::m\+\_\+brightness\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pixel_panel_ae1d6c1677dc1ffda25a04e1d00dac4f4}
+current brightness level for this logical panel \index{Pixel\+Panel@{Pixel\+Panel}!m\+\_\+num\+Pixels@{m\+\_\+num\+Pixels}}
+\index{m\+\_\+num\+Pixels@{m\+\_\+num\+Pixels}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{m\+\_\+num\+Pixels}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Pixel\+Panel\+::m\+\_\+num\+Pixels\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pixel_panel_ab6d0c54bcdab907d3bb955179e40a798}
+total pixels in this logical panel \index{Pixel\+Panel@{Pixel\+Panel}!m\+\_\+offset@{m\+\_\+offset}}
+\index{m\+\_\+offset@{m\+\_\+offset}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{m\+\_\+offset}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Pixel\+Panel\+::m\+\_\+offset\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pixel_panel_a92c44f1faf2558f55221294694d06799}
+starting pixel number in strip \index{Pixel\+Panel@{Pixel\+Panel}!m\+\_\+strip@{m\+\_\+strip}}
+\index{m\+\_\+strip@{m\+\_\+strip}!Pixel\+Panel@{Pixel\+Panel}}
+\subsubsection[{m\+\_\+strip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pixel\+Strip}$\ast$ Pixel\+Panel\+::m\+\_\+strip\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pixel_panel_adc25dceb1b6c46d575873bcb66cb6fb9}
+Pointer to the physical strip 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Panel.\+h\end{DoxyCompactItemize}

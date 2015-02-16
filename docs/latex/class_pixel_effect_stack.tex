@@ -1,0 +1,86 @@
+\section{Pixel\+Effect\+Stack Class Reference}
+\label{class_pixel_effect_stack}\index{Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}}
+
+
+{\ttfamily \#include $<$Pixel\+Effect\+Stack.\+h$>$}
+
+Inheritance diagram for Pixel\+Effect\+Stack\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pixel_effect_stack}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Effect\+Stack} ({\bf Pixel\+Strip} $\ast$strip=N\+U\+L\+L)
+\item 
+void {\bf add\+Effect} ({\bf Pixel\+Effect} $\ast$pe)
+\item 
+void {\bf init} ()
+\item 
+void {\bf run} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is not currently implemented. Stack effects in a panel on top of each other, so that one draws on top of another. \begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]Debug arduino to find out why only a few pixels are displayed when using the Knight Rider effect. See code in comments \end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}!Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}}
+\index{Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}!Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}}
+\subsubsection[{Pixel\+Effect\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}Pixel\+Effect\+Stack\+::\+Pixel\+Effect\+Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Strip} $\ast$}]{strip = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect_stack_ae03b1bff6950782c5e6f94c388bf44a9}
+Create an effect stack for a strip 
+\begin{DoxyParams}{Parameters}
+{\em strip} & Physical strip or logical Panel pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}!add\+Effect@{add\+Effect}}
+\index{add\+Effect@{add\+Effect}!Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}}
+\subsubsection[{add\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+Stack\+::add\+Effect (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Effect} $\ast$}]{pe}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect_stack_a5fff09c7f64a63b7e0a68e33d3a0abbf}
+Add an effect to the stack. The last effect added is run last, so it will draw on top of any earlier effects. Create Pixel\+Effects with new() as this class will take ownership of the pe pointer. 
+\begin{DoxyParams}{Parameters}
+{\em pe} & A \doxyref{Pixel\+Effect}{p.}{class_pixel_effect} pointer. Warning... these will be free()d by this class on destruction. \\
+\hline
+\end{DoxyParams}
+\index{Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}!init@{init}}
+\index{init@{init}!Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+Stack\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect_stack_a726083b8f63898358945226fa175757b}
+The init function, which must be called before the effect is \doxyref{run()}{p.}{class_pixel_effect_stack_a6fbd31bab015a7d3526915a60392cbd1} 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_ab3c11ba2c2f1cd26e62a0a8f16c6c02b}.
+
+\index{Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}!run@{run}}
+\index{run@{run}!Pixel\+Effect\+Stack@{Pixel\+Effect\+Stack}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+Stack\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect_stack_a6fbd31bab015a7d3526915a60392cbd1}
+The \doxyref{run()}{p.}{class_pixel_effect_stack_a6fbd31bab015a7d3526915a60392cbd1} function, which is called to update the state of the light effect 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Effect\+Stack.\+h\end{DoxyCompactItemize}

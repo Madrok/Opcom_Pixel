@@ -1,0 +1,79 @@
+\section{Pixel\+Effect\+\_\+\+Knight\+Rider Class Reference}
+\label{class_pixel_effect___knight_rider}\index{Pixel\+Effect\+\_\+\+Knight\+Rider@{Pixel\+Effect\+\_\+\+Knight\+Rider}}
+
+
+{\ttfamily \#include $<$Pixel\+Effect\+\_\+\+Night\+Rider.\+h$>$}
+
+Inheritance diagram for Pixel\+Effect\+\_\+\+Knight\+Rider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pixel_effect___knight_rider}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Effect\+\_\+\+Knight\+Rider} ({\bf Pixel\+Strip} $\ast$strip, uint16\+\_\+t speed=32, uint8\+\_\+t width=4, uint32\+\_\+t color=0x\+F\+F1000)
+\item 
+void {\bf init} ()
+\item 
+void {\bf run} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A Kinght Rider effect of pixels moving back and forth across the panel 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pixel\+Effect\+\_\+\+Knight\+Rider@{Pixel\+Effect\+\_\+\+Knight\+Rider}!Pixel\+Effect\+\_\+\+Knight\+Rider@{Pixel\+Effect\+\_\+\+Knight\+Rider}}
+\index{Pixel\+Effect\+\_\+\+Knight\+Rider@{Pixel\+Effect\+\_\+\+Knight\+Rider}!Pixel\+Effect\+\_\+\+Knight\+Rider@{Pixel\+Effect\+\_\+\+Knight\+Rider}}
+\subsubsection[{Pixel\+Effect\+\_\+\+Knight\+Rider}]{\setlength{\rightskip}{0pt plus 5cm}Pixel\+Effect\+\_\+\+Knight\+Rider\+::\+Pixel\+Effect\+\_\+\+Knight\+Rider (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Strip} $\ast$}]{strip, }
+\item[{uint16\+\_\+t}]{speed = {\ttfamily 32}, }
+\item[{uint8\+\_\+t}]{width = {\ttfamily 4}, }
+\item[{uint32\+\_\+t}]{color = {\ttfamily 0xFF1000}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect___knight_rider_a7bcca4f679f214d9f5d4d3361237fa99}
+Does a display like the car Kit in the Knight Rider T\+V show 
+\begin{DoxyParams}{Parameters}
+{\em strip} & Physical strip or logical Panel pointer \\
+\hline
+{\em speed} & how fast one cycle is (32 with 16 pixels is default Knight\+Rider speed) \\
+\hline
+{\em width} & how wide the trail effect is on the fading out L\+E\+Ds. The original display used light bulbs, so they have a persistance when turning off. This creates a trail. Effective range is 2 -\/ 8, 4 is default for 16 pixels. Play with this. \\
+\hline
+{\em color} & 32-\/bit packed R\+G\+B color value. Defaults to T\+V series color \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Effect\+\_\+\+Knight\+Rider@{Pixel\+Effect\+\_\+\+Knight\+Rider}!init@{init}}
+\index{init@{init}!Pixel\+Effect\+\_\+\+Knight\+Rider@{Pixel\+Effect\+\_\+\+Knight\+Rider}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Knight\+Rider\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___knight_rider_a16b3569280331671f795e367b4f4dd54}
+The init function, which must be called before the effect is \doxyref{run()}{p.}{class_pixel_effect___knight_rider_a35c58ed5e875365942e4666d43eafe39} 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_ab3c11ba2c2f1cd26e62a0a8f16c6c02b}.
+
+\index{Pixel\+Effect\+\_\+\+Knight\+Rider@{Pixel\+Effect\+\_\+\+Knight\+Rider}!run@{run}}
+\index{run@{run}!Pixel\+Effect\+\_\+\+Knight\+Rider@{Pixel\+Effect\+\_\+\+Knight\+Rider}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Knight\+Rider\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___knight_rider_a35c58ed5e875365942e4666d43eafe39}
+The \doxyref{run()}{p.}{class_pixel_effect___knight_rider_a35c58ed5e875365942e4666d43eafe39} function, which is called to update the state of the light effect 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Effect\+\_\+\+Night\+Rider.\+h\end{DoxyCompactItemize}

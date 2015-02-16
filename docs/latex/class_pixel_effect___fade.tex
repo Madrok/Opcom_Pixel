@@ -1,0 +1,73 @@
+\section{Pixel\+Effect\+\_\+\+Fade Class Reference}
+\label{class_pixel_effect___fade}\index{Pixel\+Effect\+\_\+\+Fade@{Pixel\+Effect\+\_\+\+Fade}}
+
+
+{\ttfamily \#include $<$Pixel\+Effect\+\_\+\+Fade.\+h$>$}
+
+Inheritance diagram for Pixel\+Effect\+\_\+\+Fade\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_pixel_effect___fade}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pixel\+Effect\+\_\+\+Fade} ({\bf Pixel\+Strip} $\ast$strip, uint32\+\_\+t delay)
+\item 
+void {\bf init} ()
+\item 
+void {\bf run} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class fades the current display. The cb\+Finished will be called when this effect is complete 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pixel\+Effect\+\_\+\+Fade@{Pixel\+Effect\+\_\+\+Fade}!Pixel\+Effect\+\_\+\+Fade@{Pixel\+Effect\+\_\+\+Fade}}
+\index{Pixel\+Effect\+\_\+\+Fade@{Pixel\+Effect\+\_\+\+Fade}!Pixel\+Effect\+\_\+\+Fade@{Pixel\+Effect\+\_\+\+Fade}}
+\subsubsection[{Pixel\+Effect\+\_\+\+Fade}]{\setlength{\rightskip}{0pt plus 5cm}Pixel\+Effect\+\_\+\+Fade\+::\+Pixel\+Effect\+\_\+\+Fade (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel\+Strip} $\ast$}]{strip, }
+\item[{uint32\+\_\+t}]{delay}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pixel_effect___fade_a3564d110cfa327be3e65455b0feb6f84}
+Create a fader using delay between steps 
+\begin{DoxyParams}{Parameters}
+{\em strip} & Physical strip or logical Panel pointer \\
+\hline
+{\em delay} & Delay between each fade step \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pixel\+Effect\+\_\+\+Fade@{Pixel\+Effect\+\_\+\+Fade}!init@{init}}
+\index{init@{init}!Pixel\+Effect\+\_\+\+Fade@{Pixel\+Effect\+\_\+\+Fade}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Fade\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___fade_a4a9ec0355f7afec0967d446a0b70a4d5}
+The init function, which must be called before the effect is \doxyref{run()}{p.}{class_pixel_effect___fade_ad538d7242223524b00c39104e2bc5001} 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_ab3c11ba2c2f1cd26e62a0a8f16c6c02b}.
+
+\index{Pixel\+Effect\+\_\+\+Fade@{Pixel\+Effect\+\_\+\+Fade}!run@{run}}
+\index{run@{run}!Pixel\+Effect\+\_\+\+Fade@{Pixel\+Effect\+\_\+\+Fade}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Pixel\+Effect\+\_\+\+Fade\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_pixel_effect___fade_ad538d7242223524b00c39104e2bc5001}
+The \doxyref{run()}{p.}{class_pixel_effect___fade_ad538d7242223524b00c39104e2bc5001} function, which is called to update the state of the light effect 
+
+Implements {\bf Pixel\+Effect} \doxyref{}{p.}{class_pixel_effect_adfff257c93348ebca93bcc7f38eee20d}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Russell/\+Documents/\+Arduino/libraries/\+Opcom\+\_\+\+Neo\+Pixel/Pixel\+Effect\+\_\+\+Fade.\+h\end{DoxyCompactItemize}
