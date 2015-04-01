@@ -25,6 +25,8 @@ private:
     Opcom::Timer m_timerFilled;
     /** true if background is cleared on first run */
     bool m_clearBackground;
+    /** true if effect is reversed **/
+    bool m_reversed;
     /** current run state */
     State m_state;
     /** current pixel to be filled */
@@ -39,7 +41,7 @@ public:
     */
     PixelEffect_ColorWipe(PixelStrip *strip, uint32_t color, uint32_t delay) :
         PixelEffectWithCallback(strip), m_colorFG(color), m_timerPixel(delay),
-        /*m_colorBG(0),*/ m_timerFilled(delay), m_clearBackground(true)
+        /*m_colorBG(0),*/ m_timerFilled(delay), m_clearBackground(true), m_reversed(false)
     {
 
     }
@@ -62,6 +64,13 @@ public:
         m_timerFilled.setInterval(delay);
     }
 
+    /**
+        Set forward or reverse direction
+    */
+    void setReversed(bool reverse) {
+        m_reversed = reverse;
+    }
+
     void init() {
         m_state = kInit;
     }
@@ -74,22 +83,32 @@ public:
         case kInit:
             if(m_clearBackground)
                 m_strip->clear();
-            m_curPixel = 0;
+            m_curPixel = m_reversed ? m_strip->numPixels() - 1 : 0;
             m_state = kSetPixels;
             if(cbInit) cbInit(this);
             // no break
         case kSetPixels:
-            if(m_curPixel < m_strip->numPixels()) {
-                m_strip->setPixelColor(m_curPixel, m_colorFG);
+            if(!m_reversed) {
+                if(m_curPixel < m_strip->numPixels()) {
+                    m_strip->setPixelColor(m_curPixel, m_colorFG);
+                }
+                m_curPixel++;
+            } else {
+                if(m_curPixel >= 0) {
+                    m_strip->setPixelColor(m_curPixel, m_colorFG);
+                }
+                m_curPixel--;
             }
-            m_curPixel++;
             m_timerPixel.reset();
             m_state = kTimerPixel;
             break;
         case kTimerPixel:
             if(!m_timerPixel.hasPeriodPassed())
                 break;
-            m_state = (m_curPixel < m_strip->numPixels()) ? kSetPixels : kFilled;
+            if(!m_reversed)
+                m_state = (m_curPixel < m_strip->numPixels()) ? kSetPixels : kFilled;
+            else
+                m_state = (m_curPixel == 0) ? kFilled : kSetPixels;
             m_timerFilled.reset();
             m_state = kTimerFilled;
             break;
