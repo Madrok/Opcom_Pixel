@@ -6,19 +6,19 @@
 
 Adafruit_NeoPixel	KEYWORD1
 PixelEffect	KEYWORD1
-PixelEffect_Alternating
-PixelEffect_ColorWipe
-PixelEffect_Fade
-PixelEffect_Fire
-PixelEffect_Flash
-PixelEffect_NightRider
-PixelEffect_Solid
-PixelEffect_TheatreChase
-PixelEffectStack
-PixelEffectWithCallback
-PixelPanel
-PixelStrip
-Timer
+PixelEffect_Alternating	KEYWORD1
+PixelEffect_ColorWipe	KEYWORD1
+PixelEffect_Fade	KEYWORD1
+PixelEffect_Fire	KEYWORD1
+PixelEffect_Flash	KEYWORD1
+PixelEffect_NightRider	KEYWORD1
+PixelEffect_Solid	KEYWORD1
+PixelEffect_TheatreChase	KEYWORD1
+PixelEffectStack	KEYWORD1
+PixelEffectWithCallback	KEYWORD1
+PixelPanel	KEYWORD1
+PixelStrip	KEYWORD1
+Timer	KEYWORD1
 
 
 
@@ -27,23 +27,23 @@ Timer
 #######################################	
 
 setPixelColor	KEYWORD2
-setPin			KEYWORD2
+setPin	KEYWORD2
 setBrightness	KEYWORD2
-numPixels		KEYWORD2
+numPixels	KEYWORD2
 getPixelColor	KEYWORD2
-Color			KEYWORD2
-disable			KEYWORD2
-init			KEYWORD2
-run				KEYWORD2
-isEnabled		KEYWORD2
+Color	KEYWORD2
+disable	KEYWORD2
+init	KEYWORD2
+run	KEYWORD2
+isEnabled	KEYWORD2
 
 #######################################
 # Constants
 #######################################
- 
-NEO_GRB			LITERAL1
-NEO_COLMASK		LITERAL1
-NEO_KHZ800		LITERAL1
-NEO_SPDMASK		LITERAL1
-NEO_RGB			LITERAL1
-NEO_KHZ400		LITERAL1
+
+NEO_GRB	LITERAL1
+NEO_COLMASK	LITERAL1
+NEO_KHZ800	LITERAL1
+NEO_SPDMASK	LITERAL1
+NEO_RGB	LITERAL1
+NEO_KHZ400	LITERAL1
